@@ -1,0 +1,19 @@
+{
+    "name": "doky",
+    "version": "1.0.0",
+    "description": "Node command line to generate puml in ascidoc documentation",
+    "author": "cevex",
+    "license": "ISC",
+    "homepage": "https://github.com/cevex/doky#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cevex/doky.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cevex/doky/issues"
+    },
+    "main": "./cli.js",
+    "bin": {
+        "doky": "./cli.js"
+    }
+}

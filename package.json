@@ -1,0 +1,47 @@
+{
+    "name": "doky",
+    "version": "1.0.0",
+    "description": "Node command line to generate puml in ascidoc documentation",
+    "author": "cevex",
+    "license": "ISC",
+    "homepage": "https://github.com/cevex/doky#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cevex/doky.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cevex/doky/issues"
+    },
+    "main": "./bin/cli.js",
+    "bin": {
+        "doky": "./bin/cli.js"
+    },
+    "scripts": {
+        "local-install": "npm run build && cd bin && npm install -g .",
+        "start": "npm run build && cd bin && node ./cli.js -n name",
+        "build": "webpack --config webpack.dev.js && shx cp ./src/package.json ./bin",
+        "build-prod": "webpack --config webpack.prod.js && shx cp ./src/package.json ./bin",
+        "analyse": "source-map-explorer dist/bundle.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "lodash": "4.17.15"
+    },
+    "devDependencies": {
+        "@types/lodash": "4.14.149",
+        "@types/yargs": "^16.0.0",
+        "clean-webpack-plugin": "3.0.0",
+        "html-webpack-plugin": "4.2.0",
+        "shebang-loader": "0.0.1",
+        "shx": "^0.3.3",
+        "ts-loader": "6.2.2",
+        "tslint": "6.1.1",
+        "typescript": "3.8.3",
+        "webpack": "4.42.1",
+        "webpack-cli": "3.3.11",
+        "webpack-dev-server": "3.10.3",
+        "webpack-merge": "4.2.2",
+        "webpack-node-externals": "1.7.2",
+        "yargs": "13.2.4"
+    }
+}
